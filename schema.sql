@@ -25,7 +25,3 @@ CREATE TABLE employees (
   manager_id INT NULL,
   PRIMARY KEY (id)
 );
-
-SELECT * FROM departments;
-SELECT * FROM roles;
-SELECT * FROM employees;
