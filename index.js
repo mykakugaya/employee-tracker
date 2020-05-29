@@ -4,14 +4,8 @@ var table = require("console.table");
 
 var connection = mysql.createConnection({
     host: "localhost",
-  
-    // Your port; if not 3306
     port: 3306,
-  
-    // Your username
     user: "root",
-  
-    // Your password
     password: "",
     database: "employeesDB"
 });
@@ -109,7 +103,7 @@ function addRole() {
 
 function addEmployee() {
     inquirer
-    .prompt(    {
+    .prompt({
         type: "input",
         message: "What is the employee's first name?",
         name: "firstName"
@@ -139,18 +133,46 @@ function addEmployee() {
 
 //View all departments, roles, employees
 function viewDepartments() {
-    init();
+    connection.query("SELECT * FROM departments", function(err, res) {
+        if (err) throw err;
+        console.table("Departments", res);
+        init();
+    })
 }
 
 function viewRoles() {
-    init();
+    connection.query("SELECT * FROM roles", function(err, res) {
+        if (err) throw err;
+        console.table("Roles", res);
+        init();
+    })
 }
 
 function viewEmployees() {
-    init();
+    connection.query("SELECT * FROM employees", function(err, res) {
+        if (err) throw err;
+        console.table("Employees", res);
+        init();
+    })
 }
 
 //Update employee role
 function updateEmployeeRole() {
-    init();
+    inquirer
+    .prompt({
+        type: "list",
+        message: "Which employee would you like to update?",
+        choices: [],
+        name: "name"
+    },
+    {
+        type: "input",
+        message: "Select a new role to assign: ",
+        choices: [],
+        name: "role"
+    })
+    .then(function(response) {
+
+        init();
+    })
 }
