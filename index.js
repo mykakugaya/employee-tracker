@@ -72,8 +72,11 @@ function addDepartment() {
         name: "name"
     })
     .then(function(response) {
-
-        init();
+        connection.query("INSERT INTO departments SET ?", {name: response.name}, function(err, res) {
+            if (err) throw err;
+            console.log(`${response.name} department added!`);
+            init();
+        })
     })
 }
 
