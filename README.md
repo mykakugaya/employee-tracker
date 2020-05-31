@@ -5,7 +5,7 @@
 ## Description
 This employee tracker application utilizes Node, inquirer, and mySQL to feature a content management system that allows a company to efficiently manage their employee data. Business owners are able to view and manage the departments, roles, and employees within the company using this simple interface, which allows them to organize future business plans and track employee changes.
 
-**Video of application functionality here:
+**Video of application functionality here: https://drive.google.com/file/d/1pbRfULpaOE2H61aqiWVJkFuetbagDxct/view
 
 ## Installation
 To install the necessary dependencies, run the command `npm i` in your command terminal. You will also need a mySQL account to create/access your database information in this application.

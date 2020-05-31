@@ -17,7 +17,8 @@ INSERT INTO employees (first_name, last_name, role_id) VALUES ("Mark", "Johnson"
 INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Angela", "Smith", 2, 1);
 INSERT INTO employees (first_name, last_name, role_id) VALUES ("Kevin", "Park", 3);
 INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Mike", "Allen", 4, 3);
-INSERT INTO employees (first_name, last_name, role_id) VALUES ("Paul", "Doe", 5);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tyler", "Chen", 6, 5);
-INSERT INTO employees (first_name, last_name, role_id) VALUES ("Sarah", "Hall", 7);
-INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tom", "Sanders", 8, 7);
+INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("John", "Deer", 5, 3);
+INSERT INTO employees (first_name, last_name, role_id) VALUES ("Paul", "Doe", 6);
+INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tyler", "Chen", 7, 6);
+INSERT INTO employees (first_name, last_name, role_id) VALUES ("Sarah", "Hall", 8);
+INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tom", "Sanders", 9, 8);

@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-const util = require('util')
+const util = require('util');
 
 var connection = mysql.createConnection({
     host: "localhost",
