@@ -101,8 +101,8 @@ async function addRole() {
 async function addEmployee() {
     try{
         let table = await db.viewAllEmp();
-        const roles = table.reduce((a,b)=>(a[b.title]=b.rid,a),{});
-        const mans = table.reduce((a,b)=> (a[`${b.first_name} ${b.last_name}`]=b.id,a),{});
+        let roles = table.reduce((a,b)=>(a[b.title]=b.rid,a),{});
+        let mans = table.reduce((a,b)=> (a[`${b.first_name} ${b.last_name}`]=b.id,a),{});
         let data = await inquirer
             .prompt([{
                 type: "input",
@@ -165,8 +165,9 @@ async function viewEmployees() {
 async function updateEmployeeRole() {
     try{
         let table1 = await db.viewAllEmp();
-        const roleList = table1.reduce((a,b)=>(a[b.title]=b.rid,a),{});
-        const employeeList = table1.reduce((a,b)=> (a[`${b.first_name} ${b.last_name}`]=b.id,a),{});
+        let roleList = table1.reduce((a,b)=>(a[b.title]=b.rid,a),{});
+        console.log(roleList);
+        let employeeList = table1.reduce((a,b)=> (a[`${b.first_name} ${b.last_name}`]=b.id,a),{});
         let data = await inquirer
             .prompt([{
                 type: "list",
@@ -175,7 +176,7 @@ async function updateEmployeeRole() {
                 name: "name"
             },
             {
-                type: "input",
+                type: "list",
                 message: "Select a new role to assign: ",
                 choices: Object.keys(roleList),
                 name: "role_id"
