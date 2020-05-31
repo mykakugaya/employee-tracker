@@ -20,7 +20,3 @@ INSERT INTO employees (first_name, last_name, role_id) VALUES ("Paul", "Doe", 5)
 INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tyler", "Chen", 6, 5);
 INSERT INTO employees (first_name, last_name, role_id) VALUES ("Sarah", "Hall", 7);
 INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES ("Tom", "Sanders", 8, 7);
-
-SELECT * FROM departments;
-SELECT * FROM roles;
-SELECT * FROM employees;
