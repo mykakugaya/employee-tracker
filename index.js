@@ -166,7 +166,6 @@ async function updateEmployeeRole() {
     try{
         let table1 = await db.viewAllEmp();
         let roleList = table1.reduce((a,b)=>(a[b.title]=b.rid,a),{});
-        console.log(roleList);
         let employeeList = table1.reduce((a,b)=> (a[`${b.first_name} ${b.last_name}`]=b.id,a),{});
         let data = await inquirer
             .prompt([{

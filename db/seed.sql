@@ -7,6 +7,7 @@ INSERT INTO roles (title, salary, department_id) VALUES ("Sales Lead", 100000.00
 INSERT INTO roles (title, salary, department_id) VALUES ("Salesperson", 70000.00, 1);
 INSERT INTO roles (title, salary, department_id) VALUES ("Lead Engineer", 160000.00, 2);
 INSERT INTO roles (title, salary, department_id) VALUES ("Software Engineer", 120000.00, 2);
+INSERT INTO roles (title, salary, department_id) VALUES ("Engineering Intern", 80000.00, 2);
 INSERT INTO roles (title, salary, department_id) VALUES ("Account Manager", 165000.00, 3);
 INSERT INTO roles (title, salary, department_id) VALUES ("Accountant", 120000.00, 3);
 INSERT INTO roles (title, salary, department_id) VALUES ("Legal Team Lead", 250000.00, 4);
